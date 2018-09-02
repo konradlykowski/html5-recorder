@@ -33,7 +33,7 @@ function doneEncoding(blob) {
     var fd = new FormData();
     fd.append('fname', "myRecording" + ((recIndex < 10) ? "0" : "") + recIndex + ".wav");
     fd.append('data', blob);
-    alert("sending blob to server")
+    alert("send wav to server (AWS Lambda) or download it with envelope below")
     $.ajax({
         type: 'POST',
         url: '/upload.php',
